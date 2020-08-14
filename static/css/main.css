@@ -1,5 +1,5 @@
 html {
-  font: 400 14px / 20px "Oswald", "Helvetica Neue",Helvetica,Arial,sans-serif; }
+  font: 400 14px / 20px Roboto, "Helvetica Neue",Helvetica,Arial,sans-serif; background-color: white;}
 
 a {
   color: #33b5e5; }
@@ -24,7 +24,7 @@ a {
 
 .uk-icon-google-plus, .uk-icon-google-plus-square {
   color: #D34836; }
-
+ 
 .uk-icon-github {
   color: #333; }
 
@@ -67,7 +67,7 @@ a {
 
 .mg-header {
   padding: 1em 0;
-  background-color: #39B39D; }
+  background-color: black; }
 
 .mg-brand {
   font-family: "Open Sans", sans-serif;
@@ -96,7 +96,8 @@ a {
 .mg-main {
   margin-top: 4em;
   margin-bottom: 3em;
-  min-height: 100%; }
+  min-height: 100%; 
+  background-color: white;}
 
 .mg-feed {
   color: #FF6600; }

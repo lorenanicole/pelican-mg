@@ -48,13 +48,12 @@
 {% endblock %}
 <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} ATOM Feed"/>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:800italic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/css/uikit.min.css">
 {% if not DISABLE_SEARCH %}
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/uikit/2.23.0/css/components/search.min.css">
 <link rel="stylesheet" href="{{ SITEURL }}/theme/css/tipuesearch.css">
 {% endif %}
-<link rel="stylesheet" href="{{ SITEURL }}/theme/css/solarized.css">
 <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -68,7 +67,7 @@
 
     <div class="uk-container uk-container-center">
 
-        <a class="mg-brand uk-navbar-brand uk-hidden-small" href="{{ SITEURL }}">{% if ALT_NAME %}{{ ALT_NAME }}{% else %}{{ SITENAME }}{% endif %}</a>
+        <a class="mg-brand uk-navbar-brand uk-hidden-small" href="{{ SITEURL }}" style="text-align:center">{% if ALT_NAME %}{{ ALT_NAME }}{% else %}{{ SITENAME }}{% endif %}</a>
         <div class="mg-tagline uk-navbar-content uk-hidden-small">{% if SITESUBTITLE %}{{ SITESUBTITLE }}{% endif %}</div>
         <a class="uk-navbar-toggle uk-visible-small" href="#mg-offcanvas" data-uk-offcanvas></a>
         <a class="mg-brand uk-navbar-brand uk-navbar-center uk-visible-small" href="{{ SITEURL }}">{% if ALT_NAME %}{{ ALT_NAME }}{% else %}{{ SITENAME }}{% endif %}</a>
@@ -77,7 +76,6 @@
 </header>
 
 <main class="mg-main">
-
 <div class="uk-container uk-container-center">
 
     <div class="uk-grid" data-uk-grid-margin>
@@ -94,6 +92,10 @@
                 </form>
             </div>
             {% endif %}
+
+            <div class="uk-panel uk-panel-box">
+            <form class="uk-search" action="https://tinyletter.com/wtdtodayelection2020" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/wtdtodayelection2020', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">Subscribe for WTD Today Election 2020 with your email address</label></p><p><input type="text" style="width:100px" name="email" id="tlemail" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p><a href="https://tinyletter.com" target="_blank">powered by TinyLetter</a></p></form>
+            </div>
 
             <div class="uk-panel uk-panel-box">
                 <ul class="uk-nav uk-nav-side">
@@ -116,22 +118,6 @@
                     <li {% if page_name == 'archives' %}class="uk-active"{% endif %}><a href="{{ SITEURL }}/archives.html">Archives</a></li>
                 </ul>
             </div>
-
-            <div class="uk-panel uk-panel-box">
-                <h3 class="uk-panel-title">Receive Updates</h3>
-                <a rel="alternate" type="application/atom+xml" href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" class="mg-feed"><i class="uk-icon-rss uk-icon-medium"></i> ATOM</a>
-            </div>
-
-            {% if SOCIAL %}
-            <div class="uk-panel uk-panel-box">
-                <h3 class="uk-panel-title">Contacts</h3>
-                {% for icon, link in SOCIAL %}
-                <a class="mg-icon-link" href="{{ link }}">
-                    <i class="uk-icon-{{ icon }} uk-icon-medium"></i>
-                </a>
-                {% endfor %}
-            </div>
-            {% endif %}
 
         </div>
 
@@ -209,8 +195,8 @@
 <script src="{{ SITEURL }}/theme/js/main-search.js"></script>
 {% endif %}
 
-{% include 'disqus_count.html' %}
-{% include 'analytics.html' %}
+<!-- {% include 'disqus_count.html' %}
+{% include 'analytics.html' %} -->
 </body>
 </html>
 
